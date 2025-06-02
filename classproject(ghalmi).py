@@ -28,14 +28,14 @@ print("\n2. SOCKET LIBRARY - Connect to Google")
 print("-" * 25)
 
 try:
-    # Create socket
+
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    # Get Google's IP address
+
     google_ip = socket.gethostbyname('www.google.com')
     print(f"✓ Google's IP: {google_ip}")
 
-    # Connect to Google (port 80 = web)
+
     s.connect((google_ip, 80))
     print("✓ Connected to Google successfully!")
     s.close()
@@ -47,14 +47,14 @@ except Exception as e:
 print("\n3. NETWORK INFORMATION")
 print("-" * 25)
 
-# Get local computer info
+
 hostname = socket.gethostname()
 local_ip = socket.gethostbyname(hostname)
 
 print(f"Your computer: {hostname}")
 print(f"Your IP: {local_ip}")
 
-# Resolve website names to IP addresses
+
 sites = ['www.python.org', 'www.stackoverflow.com']
 for site in sites:
     try:
